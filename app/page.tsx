@@ -98,17 +98,75 @@ export default function Home() {
                             animate={{ opacity: 1, scale: 1 }}
                             transition={{ duration: 0.5 }}
                             className="fixed inset-0 flex items-center justify-center z-50 p-4"
+                            onClick={() => {
+                                setIsLetterOpen(false);
+                                setIsSuccess(false);
+                            }}
                         >
                             <div className="absolute inset-0 bg-black/30 backdrop-blur-md" />
-                            <div className="relative bg-[#fffbf0] w-full max-w-lg p-8 md:p-12 rounded-lg shadow-2xl transform rotate-1 border-2 border-[#e8dcc0]">
-                                <h2 className="text-4xl font-bold text-[#5a3e36] mb-6 font-[family-name:var(--font-indie)]">
-                                    hello my dear dara,
-                                </h2>
-                                <p className="text-xl text-[#5a3e36]/80 leading-relaxed font-[family-name:var(--font-indie)] whitespace-pre-line">
-                                    I just want you to know how I’m grateful to be by your side and loving you. I’m so happy for all the memories we’ve made together – our little hangouts every week, eating delicious food, hiking and going on long rides, and many more moments that I cherish forever.  I hope we make more memories and enjoy even more experiences in the future. I’ll continue to do my best in loving you even more and I’m thankful for everything you’ve done for me.
-                                </p>
-                                <div className="mt-8 text-right text-2xl font-bold text-[#5a3e36] font-[family-name:var(--font-indie)]">
-                                    I love you, dara.
+                            <div
+                                className="relative w-full max-w-lg"
+                                onClick={(e) => e.stopPropagation()}
+                            >
+                                {/* Scattered Images */}
+                                <motion.div
+                                    initial={{ opacity: 0, x: -50, rotate: -20 }}
+                                    animate={{ opacity: 1, x: 0, rotate: -12 }}
+                                    whileHover={{ scale: 1.2, rotate: 0, zIndex: 50 }}
+                                    transition={{ duration: 0.3 }}
+                                    className="absolute -top-32 -left-28 w-48 h-56 z-0 shadow-xl border-4 border-white bg-white p-1 cursor-pointer"
+                                >
+                                    <div className="relative w-full h-full overflow-hidden">
+                                        <Image src="/dara2.png" alt="Memory 1" layout="fill" objectFit="cover" />
+                                    </div>
+                                </motion.div>
+
+                                <motion.div
+                                    initial={{ opacity: 0, x: 50, rotate: 20 }}
+                                    animate={{ opacity: 1, x: 0, rotate: 12 }}
+                                    whileHover={{ scale: 1.2, rotate: 0, zIndex: 50 }}
+                                    transition={{ duration: 0.3 }}
+                                    className="absolute -top-32 -right-32 w-44 h-52 z-0 shadow-xl border-4 border-white bg-white p-1 cursor-pointer"
+                                >
+                                    <div className="relative w-full h-full overflow-hidden">
+                                        <Image src="/dara3.png" alt="Memory 2" layout="fill" objectFit="cover" />
+                                    </div>
+                                </motion.div>
+
+                                <motion.div
+                                    initial={{ opacity: 0, y: 50, rotate: -10 }}
+                                    animate={{ opacity: 1, y: 0, rotate: -6 }}
+                                    whileHover={{ scale: 1.2, rotate: 0, zIndex: 50 }}
+                                    transition={{ duration: 0.3 }}
+                                    className="absolute -bottom-32 -left-32 w-48 h-56 z-20 shadow-xl border-4 border-white bg-white p-1 cursor-pointer"
+                                >
+                                    <div className="relative w-full h-full overflow-hidden">
+                                        <Image src="/dara4.png" alt="Memory 3" layout="fill" objectFit="cover" />
+                                    </div>
+                                </motion.div>
+
+                                <motion.div
+                                    initial={{ opacity: 0, y: 50, rotate: 10 }}
+                                    animate={{ opacity: 1, y: 0, rotate: 8 }}
+                                    whileHover={{ scale: 1.2, rotate: 0, zIndex: 50 }}
+                                    transition={{ duration: 0.3 }}
+                                    className="absolute -bottom-36 -right-24 w-44 h-52 z-20 shadow-xl border-4 border-white bg-white p-1 cursor-pointer"
+                                >
+                                    <div className="relative w-full h-full overflow-hidden">
+                                        <Image src="/dara5.png" alt="Memory 4" layout="fill" objectFit="cover" />
+                                    </div>
+                                </motion.div>
+
+                                <div className="relative bg-[#fffbf0] w-full p-8 md:p-12 rounded-lg shadow-2xl transform rotate-1 border-2 border-[#e8dcc0] z-30">
+                                    <h2 className="text-4xl font-bold text-[#5a3e36] mb-6 font-[family-name:var(--font-indie)]">
+                                        hello my dear dara,
+                                    </h2>
+                                    <p className="text-xl text-[#5a3e36]/80 leading-relaxed font-[family-name:var(--font-indie)] whitespace-pre-line">
+                                        I just want you to know how I’m grateful to be by your side and loving you. I’m so happy for all the memories we’ve made together – our little hangouts every week, eating delicious food, hiking and going on long rides, and many more moments that I cherish forever.  I hope we make more memories and enjoy even more experiences in the future. I’ll continue to do my best in loving you even more and I’m thankful for everything you’ve done for me.
+                                    </p>
+                                    <div className="mt-8 text-right text-2xl font-bold text-[#5a3e36] font-[family-name:var(--font-indie)]">
+                                        I love you, dara.
+                                    </div>
                                 </div>
                             </div>
                         </motion.div>
