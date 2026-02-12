@@ -101,6 +101,7 @@ export default function Home() {
                             onClick={() => {
                                 setIsLetterOpen(false);
                                 setIsSuccess(false);
+                                setStage(0);
                             }}
                         >
                             <div className="absolute inset-0 bg-black/30 backdrop-blur-md" />
